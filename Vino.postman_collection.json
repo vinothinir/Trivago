@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "03c555cb-54d5-4c7a-a6eb-fa696e2046a8",
+		"name": "Vino",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+					"name": "Authorization-409 MissingTimestamp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gateway.marvel.com/v1/public/series?apikey=5199a029d3052d89279c398242f7f71c&hash=92ac8c5b6871737d2e8ebb8a7f93b008",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"series"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "5199a029d3052d89279c398242f7f71c"
+						},
+						{
+							"key": "hash",
+							"value": "92ac8c5b6871737d2e8ebb8a7f93b008"
+						}
+					]
+				},
+				"description": "Sample"
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization-409 Missing Hash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gateway.marvel.com/v1/public/series?ts=1&apikey=5199a029d3052d89279c398242f7f71c",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"series"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "1"
+						},
+						{
+							"key": "apikey",
+							"value": "5199a029d3052d89279c398242f7f71c"
+						},
+						{
+							"key": "hash",
+							"value": "92ac8c5b6871737d2e8ebb8a7f93b008",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Sample"
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization-409 Missing APIKey",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gateway.marvel.com/v1/public/series?ts=1&hash=92ac8c5b6871737d2e8ebb8a7f93b008",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"series"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "1"
+						},
+						{
+							"key": "apikey",
+							"value": "5199a029d3052d89279c398242f7f71c",
+							"disabled": true
+						},
+						{
+							"key": "hash",
+							"value": "92ac8c5b6871737d2e8ebb8a7f93b008"
+						}
+					]
+				},
+				"description": "Sample"
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization-401 Invalid Referer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gateway.marvel.com/v1/public/series?ts=1&apikey=5199a029d3052d89279c398242f7f71c1&hash=92ac8c5b6871737d2e8ebb8a7f93b008",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"series"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "1"
+						},
+						{
+							"key": "apikey",
+							"value": "5199a029d3052d89279c398242f7f71c1"
+						},
+						{
+							"key": "hash",
+							"value": "92ac8c5b6871737d2e8ebb8a7f93b008"
+						}
+					]
+				},
+				"description": "Sample"
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization-401 Invalid Hash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gateway.marvel.com/v1/public/series?ts=1&apikey=5199a029d3052d89279c398242f7f71c&hash=92ac8c5b6871737d2e8ebb8a7f93b0081",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"series"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "1"
+						},
+						{
+							"key": "apikey",
+							"value": "5199a029d3052d89279c398242f7f71c"
+						},
+						{
+							"key": "hash",
+							"value": "92ac8c5b6871737d2e8ebb8a7f93b0081"
+						}
+					]
+				},
+				"description": "Sample"
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization-200 OK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gateway.marvel.com/v1/public/series?ts=1&apikey=5199a029d3052d89279c398242f7f71c&hash=92ac8c5b6871737d2e8ebb8a7f93b008",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"series"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "1"
+						},
+						{
+							"key": "apikey",
+							"value": "5199a029d3052d89279c398242f7f71c"
+						},
+						{
+							"key": "hash",
+							"value": "92ac8c5b6871737d2e8ebb8a7f93b008"
+						}
+					]
+				},
+				"description": "Sample"
+			},
+			"response": []
+		},
+		{
+			"name": "Comics-200 OK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gateway.marvel.com/v1/public/comics/27649?ts=1&apikey=5199a029d3052d89279c398242f7f71c&hash=92ac8c5b6871737d2e8ebb8a7f93b008\n",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"comics",
+						"27649"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "1"
+						},
+						{
+							"key": "apikey",
+							"value": "5199a029d3052d89279c398242f7f71c"
+						},
+						{
+							"key": "hash",
+							"value": "92ac8c5b6871737d2e8ebb8a7f93b008\n"
+						}
+					]
+				},
+				"description": "Sample"
+			},
+			"response": []
+		},
+		{
+			"name": "Characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gateway.marvel.com/v1/public/comics/27649?ts=1&apikey=5199a029d3052d89279c398242f7f71c&hash=92ac8c5b6871737d2e8ebb8a7f93b008\n",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"comics",
+						"27649"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "1"
+						},
+						{
+							"key": "apikey",
+							"value": "5199a029d3052d89279c398242f7f71c"
+						},
+						{
+							"key": "hash",
+							"value": "92ac8c5b6871737d2e8ebb8a7f93b008\n"
+						}
+					]
+				},
+				"description": "Sample"
+			},
+			"response": []
+		},
+		{
+			"name": "Characters xxxx",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gateway.marvel.com//v1/public/characters/1011010xxxxxx?ts=1&apikey=5199a029d3052d89279c398242f7f71c&hash=92ac8c5b6871737d2e8ebb8a7f93b008\n",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"",
+						"",
+						"v1",
+						"public",
+						"characters",
+						"1011010xxxxxx"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "1"
+						},
+						{
+							"key": "apikey",
+							"value": "5199a029d3052d89279c398242f7f71c"
+						},
+						{
+							"key": "hash",
+							"value": "92ac8c5b6871737d2e8ebb8a7f93b008\n"
+						}
+					]
+				},
+				"description": "Sample"
+			},
+			"response": []
+		}
+	]
+}
